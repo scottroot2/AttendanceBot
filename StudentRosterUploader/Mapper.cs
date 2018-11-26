@@ -16,7 +16,7 @@ namespace StudentRosterUploader
             {
                 FirstName = firstName,
                 LastName = lastName,
-                StudentId = Conversions.ConvertToNumber(studentID)
+                StudentId = studentID
             };
         }
     }

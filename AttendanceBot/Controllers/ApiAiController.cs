@@ -1,23 +1,26 @@
 ﻿using AttendanceBot.Data;
 using System.Web.Http;
 using AttendanceBot.Models.Response;
+using AttendanceBot.Helpers;
 
 namespace AttendanceBot.Controllers
 {
     public class ApiAiController : ApiController
     {
-        public dynamic Post(AiResponseV2 aIResponse)
+        public DialogFlowResponse Post(AiResponseV2 aiResponse)
         {
             //v2.0
             var repo = new AttendanceRepo();
-            var student = repo.GetStudent(aIResponse.QueryResult.Parameters.StudentNumber);
-
-            var response = new
+            var student = repo.GetStudent(aiResponse.QueryResult.Parameters.StudentNumber);
+            var commonModel = Handlers.AttendanceIntent.Process(
+                CommonModelHelper.DialogFlowToCommonModel(aiResponse),
+                student
+            );
+            return new DialogFlowResponse
             {
-                fulfillmentText = $"Got it {student.FirstName}, thanks!",
-                source = "echo"
+                FulfillmentText = commonModel.Response.Text,
+                Source = commonModel.Response.Source
             };
-            return response;
         }
 
         public string Get()

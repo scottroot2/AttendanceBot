@@ -166,6 +166,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\AttendanceIntent.cs" />
+    <Compile Include="Helpers\CommonModelMapper.cs" />
     <Compile Include="Helpers\Conversions.cs" />
     <Compile Include="Migrations\201811260539379_Configuration.cs" />
     <Compile Include="Migrations\201811260539379_Configuration.Designer.cs">
@@ -177,7 +179,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AttendanceSession.cs" />
+    <Compile Include="Models\Common\CommonModel.cs" />
     <Compile Include="Models\Response\AIResponseV2.cs" />
+    <Compile Include="Models\Response\DialogFlowResponse.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
