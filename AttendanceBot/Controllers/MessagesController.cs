@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using AttendanceBot.Data;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 
@@ -62,7 +63,12 @@ namespace AttendanceBot
 
         public string Get()
         {
-            return "hello world";
+            string output = "";
+            foreach (var student in new AttendanceRepo().GetStudents())
+            {
+                output += student.FirstName + " :: ";
+            }
+            return output;
         }
     }
 }

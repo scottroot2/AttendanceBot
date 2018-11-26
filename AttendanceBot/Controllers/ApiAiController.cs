@@ -1,4 +1,5 @@
 ﻿using ApiAiSDK.Model;
+using AttendanceBot.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,17 @@ namespace AttendanceBot.Controllers
 
         public string Get()
         {
-            return "Hello API.AI!";
+            string output = "";
+            
+            var repo = new AttendanceRepo();
+            //repo.SaveData(new Models.Student { StudentId = 121212, FirstName="Billy", LastName = "BoBob" });
+            var students = repo.GetStudents();
+            foreach (var student in students)
+            {
+                output += student.FirstName + " :: ";
+            }
+            return output;
+            //return "Hello API.AI!";
         }
     }
 }

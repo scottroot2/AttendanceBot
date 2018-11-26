@@ -155,10 +155,19 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ApiAiController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Data\AttendanceContext.cs" />
+    <Compile Include="Data\AttendanceRepo.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811260539379_Configuration.cs" />
+    <Compile Include="Migrations\201811260539379_Configuration.Designer.cs">
+      <DependentUpon>201811260539379_Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AttendanceSession.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,7 +183,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
+    <EmbeddedResource Include="Migrations\201811260539379_Configuration.resx">
+      <DependentUpon>201811260539379_Configuration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
