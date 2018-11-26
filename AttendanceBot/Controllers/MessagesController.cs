@@ -16,7 +16,9 @@ namespace AttendanceBot
         /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
-            if (activity.GetActivityType() == ActivityTypes.Message)
+            if (activity.GetActivityType() == ActivityTypes.Message
+                || activity.GetActivityType() == ActivityTypes.ConversationUpdate
+                )
             {
                 await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
             }
@@ -56,6 +58,11 @@ namespace AttendanceBot
             }
 
             return null;
+        }
+
+        public string Get()
+        {
+            return "hello world";
         }
     }
 }
