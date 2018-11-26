@@ -8,7 +8,7 @@ using Microsoft.Bot.Connector;
 
 namespace AttendanceBot
 {
-    [BotAuthentication]
+    //[BotAuthentication]
     public class MessagesController : ApiController
     {
         /// <summary>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceBot", "Attendance
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceBot.Tests", "AttendanceBot.Tests\AttendanceBot.Tests.csproj", "{A8460D48-BD4F-43F4-AA53-0CD4261C4E41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRosterUploader", "StudentRosterUploader\StudentRosterUploader.csproj", "{48275C02-EBA7-4399-90D7-68BB56C11AB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A8460D48-BD4F-43F4-AA53-0CD4261C4E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8460D48-BD4F-43F4-AA53-0CD4261C4E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8460D48-BD4F-43F4-AA53-0CD4261C4E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48275C02-EBA7-4399-90D7-68BB56C11AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48275C02-EBA7-4399-90D7-68BB56C11AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48275C02-EBA7-4399-90D7-68BB56C11AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48275C02-EBA7-4399-90D7-68BB56C11AB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

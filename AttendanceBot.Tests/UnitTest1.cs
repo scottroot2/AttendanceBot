@@ -16,5 +16,13 @@ namespace AttendanceBot.Tests
 
             Assert.IsTrue(repo.GetStudents().Count > 0);
         }
+
+        [TestMethod]
+        public void GetOneStudent()
+        {
+            AttendanceRepo repo = new AttendanceRepo();
+            var student = repo.GetStudent("123456");
+            Assert.IsNotNull(student);
+        }
     }
 }

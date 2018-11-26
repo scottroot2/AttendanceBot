@@ -27,7 +27,7 @@ namespace AttendanceBot.Migrations
             //    );
             //
             context.Students.Add(new Models.Student {
-                StudentId = 123456,
+                StudentId = "123456",
                 FirstName = "Scott",
                 LastName = "Root"
             });
