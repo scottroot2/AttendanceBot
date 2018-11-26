@@ -20,9 +20,18 @@ namespace AttendanceBot.Controllers
             //};
 
             //v2.0
+            var repo = new AttendanceRepo();
+            string output = "";
+            //repo.SaveData(new Models.Student { StudentId = 121212, FirstName="Billy", LastName = "BoBob" });
+            var students = repo.GetStudents();
+            foreach (var student in students)
+            {
+                output += student.FirstName + " :: ";
+            }
+
             var response = new
             {
-                fulfillmentText = "Hello API.AI from V2.0",
+                fulfillmentText = "Hello API.AI from V2.0\r\n" + output,
                 source = "echo"
             };
             return response;
